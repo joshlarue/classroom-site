@@ -1,8 +1,15 @@
-export default function Contact() {
+import { useEffect, useState } from "react";
+
+export default function Contact({headerDivHeight}) {
+  const [contactPosition, setContactPosition] = useState();
+  useEffect(() => {
+    setContactPosition(window.innerHeight)
+  }, [headerDivHeight]);
+
   return (
     // get contact card to stick to header
     <>
-      <div className="flex flex-initial flex-col justify-center items-center bg-tertiary min-w-[30vw] h-fit p-10 gap-5 rounded-bl-md">
+      <div className={`top-[${headerDivHeight}] flex flex-initial flex-col justify-center items-center bg-tertiary min-w-[30vw] h-fit p-10 gap-5 rounded-bl-md`}>
         <div className="bg-primary w-[10vw] h-[10vw]" />
         <div className="text-accent text-xl -mt-3">
           Mrs. LaRue

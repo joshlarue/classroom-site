@@ -1,7 +1,7 @@
 export default function Posts() {
   return (
     <>
-      <div className="flex flex-col flex-auto p-5 gap-5 mt-5">
+      <div className="flex flex-col flex-auto p-5 gap-5 mt-10">
         <h3 className="text-xl text-text">Classroom Updates</h3>
         <div className="flex flex-col bg-secondary-light w-full p-5 rounded-lg shadow-lg">
           <div className="text-text text-md">
